@@ -42,6 +42,14 @@ public class PrimitivesPlayground {
         System.out.println("Double Width in bits: " + Double.SIZE);
         System.out.println("-------------------------------------------");
 
+        // Char
+        System.out.println("Char Width in bits: " + Character.SIZE);
+        System.out.println("-------------------------------------------");
+
+        // Boolean
+        boolean myTrueBooleanValue = true;
+        boolean myFalseBooleanValue = false;
+
 
         // Exercises
         System.out.println("\nPrimitive Types challenge");
@@ -81,5 +89,12 @@ public class PrimitivesPlayground {
         short myShort = 32767;
         short castShort = (short) (myShort / 2);
         System.out.println(castShort);
+
+        char mySimpleChar, myUniCodeChar, myDecimalChar;
+        mySimpleChar = '?';
+        myUniCodeChar = '\u003F';
+        myDecimalChar = 63;
+        System.out.println("mySimpleChar = " + mySimpleChar + "\nmyUnicodeChar = " + myUniCodeChar + "\nmyDecimalChar = " + myDecimalChar);
+
     }
 }
