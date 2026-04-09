@@ -9,22 +9,29 @@ public class ExpressionsChallenge {
         int levelCompleted = 5;
         int bonus = 100;
 
-        int finalScore = score;
 
-        if (gameOver) {
-            finalScore += (levelCompleted * bonus);
-            System.out.println("Your final score was " + finalScore);
-        }
-
+        int result = calculateScore(gameOver, score, levelCompleted, bonus );
+        System.out.println("Your final score was: " + result);
 
         score = 10_000;
         levelCompleted = 8;
         bonus = 200;
-        finalScore = score;
+
+        result = calculateScore(gameOver, score, levelCompleted,bonus);
+        System.out.println("Your final score was: " + result);
+
+    }
+
+    public static int calculateScore(boolean gameOver, int score, int levelCompleted, int bonus) {
+
+        int finalScore = score;
 
         if (gameOver) {
             finalScore += (levelCompleted * bonus);
-            System.out.println("Your final score was " + finalScore);
+            finalScore += 1000;
+
         }
+
+        return finalScore;
     }
 }
