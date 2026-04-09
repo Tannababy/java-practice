@@ -18,5 +18,16 @@ public class StringsPlayground {
         System.out.println(numberString);
 
         // String class is immutable vs StringBuilder class is mutable.
+
+        String constantString = "interned Baeldung";
+        String newString = new String("interned Baeldung");
+        boolean isEqual = constantString.equals(newString);
+
+        System.out.println("constantString == newString: " + isEqual);
+
+        String internedString = newString.intern();
+
+        System.out.println("constantString == internedString: " + constantString.equals(internedString));
     }
 }
+
