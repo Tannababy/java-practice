@@ -22,5 +22,22 @@ public class SwitchPlayground {
             }
             default -> System.out.println("Was not 1, 2, 3, 4, or 5");
         }
+
+        String month = "XYZ";
+        System.out.println(month + " is in the " + getQuarter(month) + " quarter");
+
+    }
+
+    public static String getQuarter(String month){
+
+        return switch (month){
+            case "JANUARY", "FEBRUARY", "MARCH" -> "1st";
+            case "APRIL", "MAY", "JUNE" -> "2nd";
+            case "JULY", "AUGUST", "SEPTEMBER" -> "3rd";
+            case "OCTOBER", "NOVEMBER", "DECEMBER" -> "4th";
+            default -> month + " is bad";
+        };
+        // yield is used in a codeblock to return the value
+
     }
 }
