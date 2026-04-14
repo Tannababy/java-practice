@@ -4,7 +4,7 @@ public class OverloadedMethodChallenge {
 
     public static void main(String[] args) {
 
-        System.out.println("5Ft 11in = " + convertToCentimeters(5,11 ) + "cm.");
+        System.out.println("5Ft 11in = " + convertToCentimeters(5, 11) + "cm.");
     }
 
     public static double convertToCentimeters(int inches) {
@@ -19,3 +19,4 @@ public class OverloadedMethodChallenge {
         return convertToCentimeters(totalInches);
     }
 }
+
