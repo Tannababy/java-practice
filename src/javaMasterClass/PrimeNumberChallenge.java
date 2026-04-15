@@ -11,7 +11,9 @@ public class PrimeNumberChallenge {
 
         System.out.println("8 is " + (isPrime(8) ? "" : "NOT ") + "a prime number");
         System.out.println("17 is " + (isPrime(17) ? "" : "NOT ") + "a prime number");
-        
+
+        countPrimeNumbers(500);
+
     }
 
     public static boolean isPrime(int wholeNumber){
@@ -27,5 +29,28 @@ public class PrimeNumberChallenge {
         }
 
         return true;
+    }
+
+    public static void countPrimeNumbers(int range){
+
+        int count = 0;
+
+        if (range < 2 || range > 1000){
+            System.out.println("Invalid range of " + range);
+            return;
+        }
+
+        for (int i = 2; count < 3 && i <= range; i++){
+
+            if (isPrime(i)){
+//               if (count == 3){
+//                   break;
+//               } else {
+                System.out.println(i + " is a prime number.");
+                count++;
+//               }
+            }
+        }
+
     }
 }
