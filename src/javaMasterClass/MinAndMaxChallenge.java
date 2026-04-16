@@ -16,9 +16,8 @@ public class MinAndMaxChallenge {
         double currentNum = 0.0;
         double minNum = 0.0;
         double maxNum = 0.0;
-        boolean isRunning = true;
 
-        while (isRunning){
+        while (true){ //endless loop
             System.out.println("Hello, please enter a number or q to quit ");
             String userInput = scanner.nextLine();
 
@@ -28,14 +27,23 @@ public class MinAndMaxChallenge {
             }
 
             try {
-                minNum = Double.parseDouble(userInput);
+                currentNum = Double.parseDouble(userInput); // stores 1st num
+                if (minNum == 0 || currentNum < minNum){ // checks if a min exists or if current number is smaller than min
+                    minNum = currentNum; // updates min
+                }
+                if (maxNum == 0 || currentNum > maxNum){
+                    maxNum = currentNum;
+                }
+
             } catch (NumberFormatException nfe) {
-                System.out.println("Invalid number");
+                System.out.println("Invalid number ");
+                System.out.println("Quiting application, bye");
+                break;
             }
         }
 
         System.out.println("The minimum number = " + minNum + " and the maximum number = " + maxNum);
-        
+
 
     }
 }
