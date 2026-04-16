@@ -18,7 +18,7 @@ public class DigitSumChallenge {
 
         int sum = 0;
 
-        while (number > 9){ 
+        while (number > 9){
 
            sum += number % 10; // to extract outermost digit and add to sum
            number /= 10; // to reduce digit position each time
