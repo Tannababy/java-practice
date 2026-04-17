@@ -22,6 +22,10 @@ public class BankAccount {
 
     }
 
+    public BankAccount(String customerName, String email, String phoneNumber){
+        this("98765", 3000.00, customerName, email, phoneNumber);
+    }
+
     public String getAccountNumber() {
         return accountNumber;
     }

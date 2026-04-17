@@ -25,6 +25,9 @@ public class Main {
         BankAccount newAccount = new BankAccount("012345", 1000.00, "Ibiere Amobi", "ibemail@iternet.com", "12340987651");
         System.out.println(newAccount.getAccountNumber());
         System.out.println(newAccount.getAccountBalance());
+
+        BankAccount lotasAccount = new BankAccount("Lota", "lota@gmail.com", "123456789809");
+        System.out.println("Acct no: " + lotasAccount.getAccountNumber() + "; Acct name: " + lotasAccount.getCustomerName());
     }
 
 }
