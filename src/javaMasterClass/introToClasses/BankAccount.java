@@ -2,13 +2,27 @@ package javaMasterClass.introToClasses;
 
 public class BankAccount {
 
-    private int accountNumber;
+    private String accountNumber;
     private double accountBalance;
     private String customerName;
     private String email;
-    private int phoneNumber;
+    private String phoneNumber;
 
-    public int getAccountNumber() {
+    public BankAccount(){
+        System.out.println("Empty constructor called");
+    }
+
+    public BankAccount(String accountNumber, double accountBalance, String customerName, String customerEmail, String phoneNumber){
+        System.out.println("Bank account constructor called with parameters");
+        this.accountNumber = accountNumber;
+        this.accountBalance = accountBalance;
+        this.customerName = customerName;
+        this.phoneNumber = phoneNumber;
+        email = customerEmail;
+
+    }
+
+    public String getAccountNumber() {
         return accountNumber;
     }
 
@@ -24,11 +38,11 @@ public class BankAccount {
         return email;
     }
 
-    public int getPhoneNumber() {
+    public String getPhoneNumber() {
         return phoneNumber;
     }
 
-    public void setAccountNumber(int accountNumber) {
+    public void setAccountNumber(String accountNumber) {
         this.accountNumber = accountNumber;
     }
 
@@ -44,7 +58,7 @@ public class BankAccount {
         this.email = email;
     }
 
-    public void setPhoneNumber(int phoneNumber) {
+    public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
 

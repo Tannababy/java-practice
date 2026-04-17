@@ -15,12 +15,16 @@ public class Main {
 //        car.describeCar();
 
 
-        BankAccount myAccount = new BankAccount();
-//        myAccount.setAccountBalance(400);
+        BankAccount myAccount = new BankAccount(); //calls the default constructor (no args constructor)
+        myAccount.setAccountBalance(400);
         myAccount.withdraw(500);
         System.out.println("Account balance is now = " + myAccount.getAccountBalance());
         myAccount.deposit(45);
         System.out.println("Account balance is now = " + myAccount.getAccountBalance());
+
+        BankAccount newAccount = new BankAccount("012345", 1000.00, "Ibiere Amobi", "ibemail@iternet.com", "12340987651");
+        System.out.println(newAccount.getAccountNumber());
+        System.out.println(newAccount.getAccountBalance());
     }
 
 }
