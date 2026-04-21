@@ -28,6 +28,11 @@ public class Main {
 
         BankAccount lotasAccount = new BankAccount("Lota", "lota@gmail.com", "123456789809");
         System.out.println("Acct no: " + lotasAccount.getAccountNumber() + "; Acct name: " + lotasAccount.getCustomerName());
+
+
+
+        Customer myCustomer = new Customer();
+        System.out.println(myCustomer.getName() + " " + myCustomer.getCreditLimit() + " " + myCustomer.getEmail());
     }
 
 }
